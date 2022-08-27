@@ -10,6 +10,11 @@ configs.setup({
 		enable = true, -- false will disable the whole extension
 		disable = { "css" }, -- list of language that will be disabled
 	},
+    rainbow = {
+        enable = true,
+        extended_mode = true,
+        max_file_lines = nil,
+    },
 	autopairs = {
 		enable = true,
 	},
