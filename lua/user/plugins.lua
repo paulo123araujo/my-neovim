@@ -68,6 +68,8 @@ return packer.startup(function(use)
   use("ray-x/lsp_signature.nvim") -- see signature of methods
   use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }) -- diagnostic for telescope, lsp
   use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- beaultiful comments
+  use("HerringtonDarkholme/yats.vim") -- syntax highlight for typescript
+  use({ "neoclide/coc.nvim", branch = "release" }) -- code completion
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
