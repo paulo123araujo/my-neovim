@@ -70,11 +70,18 @@ return packer.startup(function(use)
   use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- beaultiful comments
   use("HerringtonDarkholme/yats.vim") -- syntax highlight for typescript
   use({ "neoclide/coc.nvim", branch = "release" }) -- code completion
+  use({ "ms-jpq/coq_nvim", branch = "coq" }) -- coc, but faster
+  use({ "williamboman/mason.nvim" }) -- manage  external tooling
+  use({ "rcarriga/nvim-notify" }) -- notification beaulty
+  use({ "phaazon/hop.nvim", branch = "v2", config = function()
+      require("hop").setup({keys = "etovxqpdygfblzhckisuran"})
+    end
+  })
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
 	use("lunarvim/darkplus.nvim")
-    use("morhetz/gruvbox")
+  use("morhetz/gruvbox")
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
@@ -87,6 +94,7 @@ return packer.startup(function(use)
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "79b2019c68a2ff5ae4d732d50746c901dd45603a" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets", commit = "d27a83a363e61009278b6598703a763ce9c8e617" }) -- a bunch of snippets to use
+  use({ "ms-jpq/coq.artifacts", branch="artifacts" }) -- over 9000 snippets
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig", commit = "148c99bd09b44cf3605151a06869f6b4d4c24455" }) -- enable LSP
@@ -101,6 +109,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		commit = "518e27589c0463af15463c9d675c65e464efc2fe",
 	})
+  use({ "nvim-treesitter/nvim-treesitter-context" })
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })

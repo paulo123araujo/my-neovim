@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 local lspconfig = require("lspconfig")
+local coq = require("coq")
 
 local servers = { "jsonls", "sumneko_lua" }
 
@@ -21,4 +22,5 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
 	end
 	lspconfig[server].setup(opts)
+  lspconfig[server].setup(coq.lsp_ensure_capabilities(opts))
 end
