@@ -12,6 +12,16 @@ telescope.setup {
     selection_caret = " ",
     path_display = { "smart" },
 
+    layout_strategy = "horizontal",
+    layout_config = {
+      horizontal = {
+        width = 0.8,
+        height = 0.9,
+        prompt_position = "bottom",
+        preview_cuttoff = 120,
+      },
+    },
+
     mappings = {
       i = {
         ["<C-n>"] = actions.cycle_history_next,
@@ -85,6 +95,18 @@ telescope.setup {
     -- }
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
+    find_files = {
+      theme = "dropdown",
+      layout_strategy = "horizontal",
+      layout_config = {
+        horizontal = {
+          width = 0.8,
+          height = 0.9,
+          prompt_position = "bottom",
+          preview_cuttoff = 120,
+        },
+      },
+    },
   },
   extensions = {
     -- Your extension configuration goes here:
