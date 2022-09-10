@@ -7,5 +7,6 @@
         "trace.server": "verbose",
         "filetypes": ["php"]
     }
-  }
+  },
+  "Lua.telemetry.enable": true
 }

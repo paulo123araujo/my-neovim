@@ -62,6 +62,11 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
+local coc_status = {
+  "diagnostics",
+  sources = { 'coc' },
+}
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
@@ -74,7 +79,7 @@ lualine.setup({
 	sections = {
 		lualine_a = { branch, diagnostics },
 		lualine_b = { mode },
-		lualine_c = {},
+		lualine_c = { "coc#status", coc_status },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
 		lualine_x = { diff, spaces, "encoding", filetype },
 		lualine_y = { location },
