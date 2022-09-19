@@ -69,7 +69,6 @@ return packer.startup(function(use)
   use({ "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }) -- diagnostic for telescope, lsp
   use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- beaultiful comments
   use("HerringtonDarkholme/yats.vim") -- syntax highlight for typescript
-  use({ "neoclide/coc.nvim", branch = "release" }) -- code completion
   use({ "ms-jpq/coq_nvim", branch = "coq" }) -- coc, but faster
   use({ "williamboman/mason.nvim" }) -- manage  external tooling
   use({ "rcarriga/nvim-notify" }) -- notification beaulty
@@ -77,12 +76,19 @@ return packer.startup(function(use)
       require("hop").setup({keys = "etovxqpdygfblzhckisuran"})
     end
   })
+  use("mhinz/vim-startify")
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" })
 	use("lunarvim/darkplus.nvim")
   use("morhetz/gruvbox")
-
+  use("rafamadriz/neon")
+  use("bluz71/vim-nightfly-guicolors")
+  use("mhartington/oceanic-next")
+  use({
+    'glepnir/zephyr-nvim',
+    requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
+  })
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }) -- buffer completions

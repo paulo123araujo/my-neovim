@@ -6,7 +6,7 @@ end
 local lspconfig = require("lspconfig")
 local coq = require("coq")
 
-local servers = { "jsonls", "sumneko_lua" }
+local servers = { "jsonls", "sumneko_lua", "tsserver", "phpactor", "vuels", "volar" }
 
 lsp_installer.setup({
 	ensure_installed = servers,
