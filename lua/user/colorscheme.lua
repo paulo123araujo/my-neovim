@@ -1,6 +1,6 @@
 vim.cmd [[
 try
-  colorscheme zephyr
+  colorscheme neon
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
