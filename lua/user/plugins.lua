@@ -42,7 +42,7 @@ packer.init({
 return packer.startup(function(use)
 	-- My plugins here
 
-use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
+  use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
 	use({ "nvim-lua/plenary.nvim" }) -- Useful lua functions used by lots of plugins
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
 	use({ "numToStr/Comment.nvim" })
@@ -70,7 +70,7 @@ use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
   use({ "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }) -- beaultiful comments
   use("HerringtonDarkholme/yats.vim") -- syntax highlight for typescript
   use({ "williamboman/mason.nvim" }) -- manage  external tooling
-  use({ "rcarriga/nvim-notify" }) -- notification beaulty
+  use({ "folke/nvim-notify" }) -- notification beaulty
   use({ "phaazon/hop.nvim", branch = "v2", config = function()
       require("hop").setup({keys = "etovxqpdygfblzhckisuran"})
     end
@@ -80,6 +80,7 @@ use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
   use({ "nvim-treesitter/nvim-treesitter-textobjects" })
   use({ "mfussenegger/nvim-jdtls" })
   use({ "petertriho/nvim-scrollbar" })
+  use({ "rmagatti/goto-preview" })
 
   -- Colorschemes
 	use({ "folke/tokyonight.nvim" })
@@ -92,6 +93,8 @@ use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
     'glepnir/zephyr-nvim',
     requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
   })
+  use({ "sainnhe/sonokai" })
+
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
 	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
@@ -108,7 +111,15 @@ use({ "wbthomason/packer.nvim" }) -- Have packer manage itself
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
+  use({ "jose-elias-alvarez/typescript.nvim" })
   use({ "lvimuser/lsp-inlayhints.nvim" }) -- inlay hints
+  use({
+    "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+    config = function()
+      require("lsp_lines").setup()
+    end,
+  })
+  use("folke/lsp-colors.nvim")
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })

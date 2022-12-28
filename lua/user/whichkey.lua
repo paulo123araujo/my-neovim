@@ -132,7 +132,7 @@ local mappings = {
     name = "LSP",
     a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
     d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
+      "<cmd>Telescope lsp_diagnostics<cr>",
       "Document Diagnostics",
     },
     w = {
@@ -171,7 +171,7 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
 
-  t = {
+  T = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
     u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
@@ -180,6 +180,13 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
+
+  t = {
+    name = "Trouble",
+    d = { "<cmd>TroubleToggle document_diagnostics<cr>" },
+    q = { "<cmd>TroubleToggle quickfix" },
+    w = { "<cmd>TroubleToggle workspace_diagnostics" },
   },
 }
 

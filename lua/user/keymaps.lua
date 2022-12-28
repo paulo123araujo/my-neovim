@@ -69,3 +69,5 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Custom keymaps
 keymap("n", "<C-s>", ":w!<CR>", opts)
+keymap("n", "gd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts)
+keymap("n", "gi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>", opts)
