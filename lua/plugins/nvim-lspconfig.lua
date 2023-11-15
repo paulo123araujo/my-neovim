@@ -9,6 +9,9 @@ return {
           settings = {
             -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
             workingDirectory = { mode = "auto" },
+            experimental = {
+              useFlatConfig = true,
+            },
           },
         },
         tsserver = {
@@ -45,7 +48,7 @@ return {
         eslint = function()
           vim.api.nvim_create_autocmd("BufWritePre", {
             callback = function(event)
-              if not require("lazyvim.plugins.lsp.format").enabled() then
+              if not require("lazyvim.util").format.enabled() then
                 -- exit early if autoformat is not enabled
                 return
               end
