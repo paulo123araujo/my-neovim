@@ -13,8 +13,9 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "edge",
+      -- colorscheme = "edge",
       -- colorscheme = "catppuccin-mocha",
+      colorscheme = "tokyodark",
       -- colorscheme = "tokyonight-night",
       -- colorscheme = "kanagawa",
       -- colorscheme = "gruvbox",
