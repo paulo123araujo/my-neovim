@@ -6,3 +6,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.termguicolors = true
+vim.opt.wrap = true
